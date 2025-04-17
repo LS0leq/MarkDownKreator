@@ -37,36 +37,7 @@
 }
 
 
-.hero div a {
-    align-items: center;
-    background-image: linear-gradient(144deg,#AF40FF, #f342eb 50%,#ab00eb);
-    border-radius: 8px;
-    box-shadow: rgb(66, 20, 69) 0 15px 30px -5px;
-    color: #FFFFFF;
-    display: flex;
-    font-size: 20px;
-    padding: 3px;
-    text-decoration: none;
-    cursor: pointer;
-    width: 180px;
-    text-align: center;
-}
 
-.hero div a span {
-    background-color: rgb(66, 20, 69);
-    padding: 8px 16px;
-    border-radius: 6px;
-    width: 100%;
-    height: 100%;
-    transition: 300ms;
-    justify-content: center;
-    gap: 8px;
-    display: flex;
-}
-
-.hero div a:hover span {
-    background: none;
-}
 
 .hero div a img{
     width: 20px;

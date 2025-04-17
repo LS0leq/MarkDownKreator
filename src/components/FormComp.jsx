@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { useForm } from 'react-hook-form';
 import './css/FormComp.css';
+import {Link} from "react-router-dom";
 
 
 const FormComp = () => {
@@ -15,12 +16,21 @@ const FormComp = () => {
     return (
         <div className="form">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input placeholder="np. Login123" {...register('name', {required: true})}/>
-                {errors.name && <p>Musisz podać swój login</p>}
-                <input placeholder="np. Hasło123!@#" type="password" {...register('password', {required: true})}/>
-                {errors.password && <p>Musisz podać swoje hasło</p>}
-                <input type="submit"/>
-                {succesMessage && <p>{succesMessage}</p>}
+                <h1>Logowanie</h1>
+                <div>
+                    <label>Wprowadź login</label>
+                    <input placeholder="np. Login123" type="text" {...register('login', {required: true})}/>
+                    {errors.name && <p>Musisz podać swój login</p>}
+                    <br/>
+                    <label>Wprowadź hasło</label>
+                    <input placeholder="np. Hasło123!@#" type="password" {...register('password', {required: true})}/>
+                    {errors.password && <p>Musisz podać swoje hasło</p>}
+                    <input type="submit" value="Wyślij"/>
+                    {succesMessage && <p>{succesMessage}</p>}
+
+                </div>
+
+                <Link to="/register">Nie masz konta? <p>Zarejestruj się!</p></Link>
             </form>
         </div>
     );
