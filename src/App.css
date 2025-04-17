@@ -8,5 +8,11 @@
 :root {
     --gray-color: #6e6e6e;
     --pink-color: #b6258a;
+    --dark-gray-color:#1e1e1e;
+
+}
+
+body{
+    background-color: black;
 
 }

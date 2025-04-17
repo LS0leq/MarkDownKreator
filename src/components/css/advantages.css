@@ -1,0 +1,56 @@
+.advantages ul{
+    display: flex;
+    width: 77vw;
+    gap: 60px;
+}
+
+.advantages{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 30px;
+}
+
+.advantages ul li{
+    list-style: none;
+    text-align: center;
+    background: -webkit-linear-gradient(to right, #89216B, var(--pink-color));
+    background: linear-gradient(to right, #89216B, var(--pink-color));
+    transition: 0.3s;
+
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: rgb(66, 20, 69) 0 15px 30px -5px;
+    margin-top: -76px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 24vw;
+
+
+}
+
+.advantages ul li h1{
+    color: white;
+    font-size: 72px;
+    padding: 16px 0px;
+}
+
+.advantages ul li h3{
+    font-size: 24px;
+}
+
+.advantages ul li p{
+    font-size: 16px;
+}
+
+.advantages ul li img{
+    height: 8vw;
+    filter: invert(1);
+
+}
+
+.advantages ul li:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}

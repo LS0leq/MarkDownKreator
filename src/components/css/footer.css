@@ -1,0 +1,45 @@
+footer{
+    display: flex;
+    color: white;
+    justify-content: center;
+    gap:100px;
+    padding: 24px;
+    background-color: black;
+    background-image: url("/src/components/img/flashfooter.png");
+    background-size: cover;
+    background-position: center;
+}
+
+footer div ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 18vw;
+    margin-top: 8px;
+}
+
+footer div ul li{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+footer div ul li a{
+    text-decoration: none;
+    color: var(--pink-color);
+
+}
+footer div h1{
+    text-align: center;
+}
+
+footer div ul li img{
+    width: 40px;
+    filter: invert(1);
+}
+
+footer div{
+    align-content: center;
+}

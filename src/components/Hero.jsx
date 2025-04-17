@@ -9,10 +9,8 @@ const Hero = () => {
         <div className="hero">
             <div>
                 <h1>Utwórz szybko pliki MarkDown!</h1>
-                <p>Twój nowy, intuicyjny kreator plików Markdown — szybki, prosty, i wygodny sposób na tworzenie
-                    profesjonalnych dokumentów bez zbędnego kodowania. Twórz, edytuj i udostępniaj swoje pliki w
-                    popularnym formacie MD bez wysiłku. Niezależnie od tego, czy piszesz dokumentację, bloga, czy
-                    notatki, nasz kreator to idealne narzędzie dla Ciebie!</p>
+                <p><b>Twórz. Edytuj. Publikuj. </b>
+                     Nowy sposób na szybkie pisanie dokumentów Markdown – bez kodowania, bez kompromisów.</p>
                 <Link to="/login"><span class="text">Zaloguj się <img src={iconLogin}/> </span></Link>
             </div>
             <img src={logo} alt="Hero Image" id="logoHero"/>

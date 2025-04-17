@@ -16,9 +16,9 @@
 }
 
 .hero div p{
-    color: var(--gray-color);
-    font-size: 12px;
+    font-size: 14px;
     width: 48vw;
+    font-style: italic;
 }
 
 .hero div h1{

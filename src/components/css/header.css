@@ -4,7 +4,8 @@ header{
     justify-content: space-between;
     padding: 50px;
     height: 20px;
-    background-color: gray;
+    background-color: black;
+    color: white;
 }
 nav ul{
     display: flex;
@@ -14,4 +15,10 @@ nav ul{
 
 nav ul li a{
     text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: var(--pink-color);
 }
