@@ -1,3 +1,16 @@
 .stats{
     color: white;
 }
+
+.statsDiv {
+    display: flex;
+    gap: 28px;
+}
+
+.statsDiv p{
+    border: 2px solid var(--pink-color);
+    margin-top: 30px;
+    border-radius: 4px;
+    padding: 20px;
+    background-image: linear-gradient(144deg,#AF40FF, #f342eb 50%,#ab00eb);
+}

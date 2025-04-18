@@ -44,12 +44,18 @@ const Create = () => {
     const handleReset = () => setText('');
 
     const handleSaveAndReload = async () => {
+        const titleDoc = document.querySelector('.title-input').value;
         try {
-            await fetch('https://twoj-backend.pl/save', {
+            await fetch('https://markdownbackend-qcro.onrender.com/posts', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ content: text }),
+                body: JSON.stringify({
+                    user_id: localStorage.getItem('id'),
+                    title: titleDoc,
+                    content: text,
+                }),
             });
+
             window.location.reload();
         } catch (err) {
             console.error('Błąd zapisu:', err);
@@ -57,11 +63,12 @@ const Create = () => {
     };
 
     const handleExportToPDF = () => {
+        const titleDoc = document.querySelector('.title-input').value;
         const element = previewRef.current;
         element.classList.add('static');
         const opt = {
             margin: 0.5,
-            filename: 'dokument.pdf',
+            filename: titleDoc + '.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 2 },
             jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
@@ -90,6 +97,13 @@ const Create = () => {
                     </button>
                 ))}
             </div>
+
+            <h2>Podaj tytuł dokumentu</h2>
+            <input
+                type="text"
+                placeholder="Tytuł dokumentu"
+                className="title-input"
+                />
 
             <textarea
                 value={text}
@@ -127,9 +141,9 @@ const Create = () => {
             </div>
 
             <div className="button-group">
-                <button onClick={handleReset}>Resetuj</button>
-                <button onClick={handleSaveAndReload}>Zapisz i odśwież</button>
-                <button onClick={handleExportToPDF}>Eksportuj do PDF</button>
+                <button className="button" onClick={handleReset}>Resetuj</button>
+                <button className="button"onClick={handleSaveAndReload}>Zapisz i odśwież</button>
+                <button className="button"onClick={handleExportToPDF}>Eksportuj do PDF</button>
             </div>
         </div>
     );

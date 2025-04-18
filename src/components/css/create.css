@@ -53,7 +53,6 @@
     margin-bottom: 2rem;
 }
 
-/* Styl dla kodu */
 .preview-display pre {
     background: #161b22;
     padding: 1rem;
@@ -61,10 +60,30 @@
     overflow-x: auto;
 }
 
-/* Styl dla cytatów, tabel, itd. można też dodać osobno */
 .preview-display blockquote {
     border-left: 4px solid #30363d;
     padding-left: 1em;
     color: #8b949e;
     margin: 1em 0;
+}
+
+.button {
+    background-color: #ff5ec6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: #ff2bbd;
+    box-shadow: 0 0 10px #ff2bbd80;
+}
+
+.button-group{
+    display: flex;
+    gap: 20px;
 }
