@@ -1,70 +1,88 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📘 MarkDown Kreator
 
-## Available Scripts
+Aplikacja webowa do tworzenia postów w Markdownie z funkcjami logowania i rejestracji. Frontend zbudowany w React, backend w FastAPI.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🧩 Spis treści
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. [Opis projektu](#opis-projektu)  
+2. [Technologie](#technologie)  
+3. [Struktura projektu](#struktura-projektu)  
+4. [Frontend (React)](#frontend-react)  
+5. [Zabezpieczenia](#zabezpieczenia)  
+6. [Uwagi końcowe](#uwagi-końcowe)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📝 Opis projektu
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**MarkDown Kreator** to aplikacja full-stack umożliwiająca:
+- Rejestrację i logowanie użytkowników
+- Tworzenie postów w języku Markdown
+- Podgląd oraz eksport postów do PDF
+- Zarządzanie postami w dashboardzie
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Technologie
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend:
+- Python 3.11+
+- FastAPI
+- SQLAlchemy
+- MySQL
+- Render.com (hosting)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend:
+- React 19 (Create React App)
+- React Router Dom v7
+- React Hook Form
+- HTML2PDF.js
+- React Markdown
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Struktura projektu
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+/mark               # frontend (React)
+/backend            # backend (FastAPI)
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌐 Frontend (React)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Funkcjonalności:
+- Formularze rejestracji i logowania
+- Obsługa Markdown + podgląd
+- Eksport do PDF
+- Lista postów i dashboard
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔐 Zabezpieczenia
 
-### Analyzing the Bundle Size
+- Hasła hashowane z użyciem bcrypt
+- Walidacja danych na frontendzie i backendzie
+- Użycie SQLAlchemy (ORM) zabezpiecza przed SQL Injection
+- Obsługa CORS
+- Token przechowywany w localStorage 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## ❗ Uwagi końcowe
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Render.com potrzebuje kilku sekund na „wybudzenie” aplikacji
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 Licencja
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Projekt stworzony do celów edukacyjnych.  
