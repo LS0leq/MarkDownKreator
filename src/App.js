@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Stats from "./components/Stats";
 import Create from "./components/Create";
 import List from "./components/List";
+import Privacy from "./pages/Privacy";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/about" element={<About />} />
+            <Route path="/privacy" element={<Privacy />} />
               <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>}>
                   <Route path="stats" element={<Stats />} />
                   <Route path="create" element={<Create />} />

@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 const FormRegistration = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [succesMessage, setSuccesMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const onSubmit = (data) => {
-        alert('Uwaga! Czasem trzeba trochę dłużej poczekać z powdodu wolnego serwera ☹. Przepraszam za wszelkie niedokonności...');
+        setIsLoading(true);
         fetch('https://markdownbackend-qcro.onrender.com/register',{
             method:'POST',
             headers:{
@@ -23,7 +24,10 @@ const FormRegistration = () => {
                     setSuccesMessage('Błędny login lub hasło');
                 }
             })
-            .catch(err=> console.log(err));
+            .catch(err=> console.log(err))
+            .finally(()=>{
+                setIsLoading(false);
+            })
     }
 
     return (
@@ -72,6 +76,7 @@ const FormRegistration = () => {
                     <br />
 
                     <input type="submit" value="Zarejestruj się" />
+                    {isLoading && <div className="spinner"></div>}
                     {succesMessage && <p>{succesMessage}</p>}
                 </div>
 

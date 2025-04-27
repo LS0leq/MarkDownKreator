@@ -36,6 +36,7 @@ const blocks = [
 const Create = () => {
     const [text, setText] = useState('');
     const previewRef = useRef(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleInsert = (snippet) => {
         setText((prev) => prev + snippet);
@@ -44,6 +45,7 @@ const Create = () => {
     const handleReset = () => setText('');
 
     const handleSaveAndReload = async () => {
+        setIsLoading(true);
         const titleDoc = document.querySelector('.title-input').value;
         try {
             await fetch('https://markdownbackend-qcro.onrender.com/posts', {
@@ -56,7 +58,7 @@ const Create = () => {
                 }),
             });
 
-            window.location.reload();
+            setIsLoading(false);
         } catch (err) {
             console.error('Błąd zapisu:', err);
         }
@@ -142,9 +144,12 @@ const Create = () => {
 
             <div className="button-group">
                 <button className="button" onClick={handleReset}>Resetuj</button>
-                <button className="button"onClick={handleSaveAndReload}>Zapisz i odśwież</button>
+                <button className="button"onClick={handleSaveAndReload}>Zapisz</button>
                 <button className="button"onClick={handleExportToPDF}>Eksportuj do PDF</button>
+                {isLoading && <div className="spinner"></div>}
+
             </div>
+
         </div>
     );
 };

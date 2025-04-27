@@ -8,9 +8,10 @@ const FormComp = () => {
     const{ register, handleSubmit, formState: { errors } } = useForm();
     const [succesMessage, setSuccesMessage] = useState('');
     const navigate = useNavigate();
+    const [isLoading, setIsLoading]=useState(false);
 
     const onSubmit = (data) => {
-        alert('Uwaga! Czasem trzeba trochę dłużej poczekać z powodu wolnego serwera ☹. Przepraszam za wszelkie niedogodności...');
+        setIsLoading(true);
 
         fetch('https://markdownbackend-qcro.onrender.com/login', {
             method: 'POST',
@@ -34,7 +35,10 @@ const FormComp = () => {
                     setSuccesMessage('Błędny login lub hasło');
                 }
             })
-            .catch(err => console.error(err));
+            .catch(err => console.error(err))
+            .finally(()=>{
+                setIsLoading(false);
+        })
     };
 
     return (
@@ -63,6 +67,7 @@ const FormComp = () => {
                     })} />
                     {errors.password && <p>{errors.password.message}</p>}
                     <input type="submit" value="Wyślij" onSubmit={handleSubmit}/>
+                    {isLoading && <div className="spinner"></div>}
                     {succesMessage && <p>{succesMessage}</p>}
 
                 </div>

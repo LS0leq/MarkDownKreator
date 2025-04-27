@@ -37,11 +37,11 @@ const Stats = () => {
 
             {stats ? (
                 <div className="statsDiv">
-                    <p>Liczba postów: {stats.total_posts}</p>
+                    <p><strong>Liczba plików:</strong> {stats.total_posts}</p>
                     {stats.last_post ? (
                         <>
                             <p><strong>Tytuł:</strong> {stats.last_post.title}</p>
-                            <p><strong>Data:</strong> {new Date(stats.last_post.created_at).toLocaleString()}</p>
+                            <p><strong>Najnowszy plik - data:</strong> {new Date(stats.last_post.created_at).toLocaleString()}</p>
                         </>
                     ) : (
                         <p>Brak postów.</p>

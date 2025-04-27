@@ -16,7 +16,7 @@ const Footer = () => {
                 <ul>
                     <li><Link to="/about">O mnie</Link></li>
                     <li><Link to="/privacy">Polityka prywatności</Link></li>
-                    <li><a target="_blank" href="#">Dokumentacja (GitHub)</a></li>
+                    <li><a target="_blank" href="https://github.com/LS0leq/MarkDownKreator/blob/main/README.md">Dokumentacja (GitHub)</a></li>
                 </ul>
             </div>
 

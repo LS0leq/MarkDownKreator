@@ -3,6 +3,7 @@ div.form {
     padding: 75px;
     color: white;
     justify-content: space-around;
+    height: 70vh;
 }
 form {
     display: flex;

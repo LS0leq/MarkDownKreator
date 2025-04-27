@@ -1,15 +1,15 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from "../components/Footer";
-import AboutComp from "../components/AboutComp";
-function About() {
+import PrivacyComp from "../components/PrivacyComp";
+function Privacy() {
     return (
         <>
             <Header/>
-            <AboutComp/>
+            <PrivacyComp/>
             <Footer/>
         </>
     );
 }
 
-export default About;
+export default Privacy;
