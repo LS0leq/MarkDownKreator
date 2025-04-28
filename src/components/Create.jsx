@@ -37,6 +37,7 @@ const Create = () => {
     const [text, setText] = useState('');
     const previewRef = useRef(null);
     const [isLoading, setIsLoading] = useState(false);
+    const [isAdded, setIsAdded] = useState('');
 
     const handleInsert = (snippet) => {
         setText((prev) => prev + snippet);
@@ -59,6 +60,10 @@ const Create = () => {
             });
 
             setIsLoading(false);
+            setIsAdded("Dodano nowy plik!");
+            setTimeout(() => {
+                setIsAdded('');
+            }, 2000);
         } catch (err) {
             console.error('Błąd zapisu:', err);
         }
@@ -147,6 +152,7 @@ const Create = () => {
                 <button className="button"onClick={handleSaveAndReload}>Zapisz</button>
                 <button className="button"onClick={handleExportToPDF}>Eksportuj do PDF</button>
                 {isLoading && <div className="spinner"></div>}
+                {isAdded}
 
             </div>
 
