@@ -1,11 +1,35 @@
 .nav {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.nav ul{
+.nav ul {
     display: flex;
     list-style: none;
     gap: 160px;
     padding: 26px;
+    margin: 0;
+    z-index: 200;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: var(--pink-color);
+}
+
+/* 📱 Mobile & tablet styles — bez hamburgera */
+@media (max-width: 768px) {
+    nav.nav{
+        position: relative !important;
+        top:0 !important;
+        background-color: transparent !important;
+        max-height: 100vh !important;
+    }
 }

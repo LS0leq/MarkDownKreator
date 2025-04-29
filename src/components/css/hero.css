@@ -15,13 +15,13 @@
     width: 20vw;
 }
 
-.hero div p{
+.hero div p {
     font-size: 14px;
     width: 48vw;
     font-style: italic;
 }
 
-.hero div h1{
+.hero div h1 {
     text-align: left;
     font-size: 60px;
     text-transform: capitalize;
@@ -30,16 +30,40 @@
     color: var(--pink-color);
 }
 
-.hero div{
+.hero div {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
 
-
-
-
-.hero div a img{
+.hero div a img {
     width: 20px;
     filter: invert(1);
+}
+
+/* 📱 Mobile & tablet styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 30px 10px;
+        height: auto;
+    }
+
+    .hero div h1 {
+        font-size: 36px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero div p {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    #logoHero {
+        width: 50vw;
+        margin-top: 20px;
+    }
 }

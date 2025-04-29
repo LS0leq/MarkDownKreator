@@ -7,8 +7,9 @@ import '../components/css/dashboard.css';
 const Dashboard = () => {
     return (
         <div className="dashboard">
-            <NavBar />
             <main>
+                <NavBar />
+
                 <Outlet />
             </main>
         </div>

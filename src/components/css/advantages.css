@@ -1,23 +1,24 @@
-.advantages ul{
+.advantages ul {
     display: flex;
     width: 77vw;
     gap: 60px;
+    padding: 0;
+    margin: 0;
 }
 
-.advantages{
+.advantages {
     display: flex;
     justify-content: center;
     color: white;
     padding: 30px;
+    overflow-x: hidden;
 }
 
-.advantages ul li{
+.advantages ul li {
     list-style: none;
     text-align: center;
-    background: -webkit-linear-gradient(to right, #89216B, var(--pink-color));
     background: linear-gradient(to right, #89216B, var(--pink-color));
     transition: 0.3s;
-
     padding: 24px;
     border-radius: 10px;
     box-shadow: rgb(66, 20, 69) 0 15px 30px -5px;
@@ -26,31 +27,59 @@
     flex-direction: column;
     gap: 14px;
     width: 24vw;
-
-
 }
 
-.advantages ul li h1{
+.advantages ul li h1 {
     color: white;
     font-size: 72px;
-    padding: 16px 0px;
+    padding: 16px 0;
 }
 
-.advantages ul li h3{
+.advantages ul li h3 {
     font-size: 24px;
 }
 
-.advantages ul li p{
+.advantages ul li p {
     font-size: 16px;
 }
 
-.advantages ul li img{
+.advantages ul li img {
     height: 8vw;
     filter: invert(1);
-
 }
 
-.advantages ul li:hover{
+.advantages ul li:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+/* 📱 Mobile & tablet styles */
+@media (max-width: 768px) {
+    .advantages ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .advantages ul li {
+        width: 90%;
+        margin-top: 0;
+    }
+
+    .advantages ul li h1 {
+        font-size: 48px;
+    }
+
+    .advantages ul li h3 {
+        font-size: 20px;
+    }
+
+    .advantages ul li p {
+        font-size: 16px;
+    }
+
+    .advantages ul li img {
+        height: 20vw;
+    }
 }
