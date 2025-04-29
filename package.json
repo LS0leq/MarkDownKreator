@@ -1,7 +1,6 @@
 {
   "name": "mark",
   "homepage": "https://kreator.lsoleq.xaa.pl",
-
   "version": "0.1.0",
   "private": true,
   "dependencies": {

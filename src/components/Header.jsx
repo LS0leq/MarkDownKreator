@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './css/header.css';
 
 const Header = () => {
-    return(
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
+    return (
         <header>
             <h1>Kreator MarkDown Online</h1>
-            <nav>
+            <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                {menuOpen ? '✕' : '☰'}
+            </button>
+            <nav className={menuOpen ? 'open' : ''}>
                 <ul>
-                    <li><Link to="/">Strona główna</Link></li>
-                    <li><Link to="/login">Konto</Link></li>
-                    <li><Link to="/about">O twórcy</Link></li>
+                    <li><Link to="/" onClick={closeMenu}>Strona główna</Link></li>
+                    <li><Link to="/login" onClick={closeMenu}>Konto</Link></li>
+                    <li><Link to="/about" onClick={closeMenu}>O twórcy</Link></li>
                 </ul>
             </nav>
         </header>
